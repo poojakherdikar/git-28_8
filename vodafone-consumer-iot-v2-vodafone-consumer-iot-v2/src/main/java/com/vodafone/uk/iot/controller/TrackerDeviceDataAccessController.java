@@ -32,6 +32,8 @@ public class TrackerDeviceDataAccessController implements IOTDataAccessControlle
 		
 		Optional<?> resp = deviceInfoService.getDeviceInfo(ProductId, tstmp);
 		
+		System.out.println("Ajinkya");
+		
 		if (resp.get() instanceof DeviceInfoResponse ){
 			return ResponseEntity.ok(resp.get());
 		}

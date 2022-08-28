@@ -25,6 +25,7 @@ public class CSVUploadController implements IOTUpdateController {
 	public ResponseEntity<IOTResponse> loadCSVFile(CSVDetail csvDetail) {
 		Optional<IOTResponse> resp = dataService.loadCSVFile(csvDetail.getFilepath(),csvDetail.getDelimiter());
 		IOTResponse iotResponse = resp.get();
+		System.out.println("Ajinkya");
 		
 		if(iotResponse.getDescription().equals(IOTConstant.DATA_REFRESHED)) {
 			return ResponseEntity.ok(iotResponse);
